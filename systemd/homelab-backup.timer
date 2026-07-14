@@ -1,0 +1,9 @@
+[Unit]
+Description=Run Homelab Backup Orchestrator Daily at 6 AM
+
+[Timer]
+OnCalendar=*-*-* 06:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

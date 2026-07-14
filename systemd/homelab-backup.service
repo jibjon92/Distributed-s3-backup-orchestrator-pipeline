@@ -1,0 +1,13 @@
+[Unit]
+Description=Homelab Distributed AWS S3 Backup Orchestrator
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/homelab-s3-backup/scripts
+ExecStart=/homelab-s3-backup/scripts/backup_orchestrator.sh
+
+[Install]
+WantedBy=multi-user.target
